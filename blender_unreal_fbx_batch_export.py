@@ -330,5 +330,38 @@ class wm_batch_export(bpy.types.Operator):
         return {'FINISHED'}
 ###########################################  
      
+def register():
+	#bpy.utils.register_module(__name__)
+	bpy.utils.register_class(UnrealTools)
+	bpy.utils.register_class(wm_unreal_Units)
+	bpy.utils.register_class(wm_blender_Units)
+	bpy.utils.register_class(wm_Vertex_Select)
+	bpy.utils.register_class(wm_Edge_Select)
+	bpy.utils.register_class(wm_Face_Select)
+	bpy.utils.register_class(wm_smooth)
+	bpy.utils.register_class(wm_Invert)
+	bpy.utils.register_class(wm_Select_All)
+	bpy.utils.register_class(wm_origin_vertex)
+	bpy.utils.register_class(wm_origin_com)
+	bpy.utils.register_class(wm_freeze_loc)
+	bpy.utils.register_class(wm_batch_export)
+	
+def unregister():
+	#bpy.utils.unregister_module(__name__) 
+	bpy.utils.unregister_class(UnrealTools)
+	bpy.utils.unregister_class(wm_unreal_Units)
+	bpy.utils.unregister_class(wm_blender_Units)
+	bpy.utils.unregister_class(wm_Vertex_Select)
+	bpy.utils.unregister_class(wm_Edge_Select)
+	bpy.utils.unregister_class(wm_Face_Select)
+	bpy.utils.unregister_class(wm_smooth)
+	bpy.utils.unregister_class(wm_Invert)
+	bpy.utils.unregister_class(wm_Select_All)
+	bpy.utils.unregister_class(wm_origin_vertex)
+	bpy.utils.unregister_class(wm_origin_com)
+	bpy.utils.unregister_class(wm_freeze_loc)
+	bpy.utils.unregister_class(wm_batch_export)
+
 if __name__== "__main__": 
-    bpy.utils.register_module(__name__) 
+	register()
+    
